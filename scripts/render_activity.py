@@ -138,23 +138,15 @@ def month_markers(weeks: list[list[dict | None]]) -> list[tuple[int, str]]:
 
 def draw_calendar(parent: ET.Element, weeks: list[list[dict | None]], x: float,
                   y: float, pitch_x: float, pitch_y: float, cell: float,
-                  label_size: float) -> None:
+                  label_size: float, *, animated: bool = False, id_prefix: str = "calendar") -> None:
     for index, label in month_markers(weeks):
         text(parent, x + index * pitch_x, y - 14, label, label_size, MUTED)
     for row, label in ((1, "Lun"), (3, "Mié"), (5, "Vie")):
         text(parent, x - 12, y + row * pitch_y + cell - 2, label,
              label_size - 1, MUTED, text_anchor="end")
-    for column, week in enumerate(weeks):
-        for row, day in enumerate(week):
-            px, py = round(x + column * pitch_x, 2), round(y + row * pitch_y, 2)
-            if day is None:
-                # Out-of-period padding is visually distinct from a zero day.
-                rect(parent, px, py, cell, cell, "none", 3, stroke=LINE, stroke_opacity=".35")
-                continue
-            square = rect(parent, px, py, cell, cell, LEVELS[day["level"]], 3)
-            title = node(square, "title")
-            suffix = "contribución" if day["count"] == 1 else "contribuciones"
-            title.text = f"{short_date(day['date'])}: {number(day['count'])} {suffix}"
+    from contribution_motion import animate_calendar
+    animate_calendar(parent, weeks, x, y, pitch_x, pitch_y, cell,
+                     id_prefix=id_prefix, animated=animated)
 
 
 def legend(parent: ET.Element, right: float, y: float, size: float = 13,
@@ -167,111 +159,67 @@ def legend(parent: ET.Element, right: float, y: float, size: float = 13,
     text(parent, right, y + cell - 2, "Más", size, MUTED, text_anchor="end")
 
 
-def statistic(parent: ET.Element, x: float, y: float, width: float, height: float,
-              value: int, label: str, detail: str, accent: str, mobile: bool) -> None:
-    rect(parent, x, y, width, height, PANEL, 14, stroke=LINE)
-    rule(parent, x + 20, y, 43, accent, stroke_width=2)
-    font_size = 45 if mobile else 44
-    if len(number(value)) >= 7:
-        font_size = 39
-    text(parent, x + 20, y + 48, number(value), font_size, INK, 650, letter_spacing="-1.7")
-    text(parent, x + 21, y + 76, label, 17 if mobile else 15, INK, 550)
-    text(parent, x + 21, y + 96, detail, 15 if mobile else 13, MUTED)
-    # A tiny decorative data motif, independent of actual metric values.
-    for index, height_ratio in enumerate((0.4, 0.7, 1)):
-        bar_height = 15 * height_ratio
-        rect(parent, x + width - 37 + index * 7, y + 44 - bar_height,
-             3, bar_height, accent, 1.5, fill_opacity=".4")
-
-
 def make_svg(data: dict, mobile: bool, animated: bool) -> str:
-    width, height = (720, 920) if mobile else (1200, 620)
+    """One compact activity panel: fixed metrics and one animated calendar."""
+    width, height = (720, 744) if mobile else (1200, 450)
     svg = ET.Element(f"{{{NS}}}svg", {
         "width": str(width), "height": str(height), "viewBox": f"0 0 {width} {height}",
         "role": "img", "aria-labelledby": "activity-title activity-desc",
     })
-    title = node(svg, "title", id="activity-title")
-    title.text = f"Actividad en GitHub de {data['username']}"
-    description = node(svg, "desc", id="activity-desc")
-    description.text = (
+    node(svg, "title", id="activity-title").text = f"Actividad en GitHub de {data['username']}"
+    node(svg, "desc", id="activity-desc").text = (
         f"{number(data['total_contributions'])} contribuciones en el calendario anual de GitHub, "
         f"del {date_range(data['_start'], data['_end'])}; {number(data['active_days'])} días activos; "
         f"{number(data['last_30_days'])} contribuciones en los últimos 30 días; "
         f"{number(data['public_repos'])} repositorios públicos. "
-        "Calendario diario real: mayor intensidad verde significa más contribuciones. "
-        "Cada color corresponde al nivel de actividad proporcionado por GitHub."
+        + ("Una serpiente consume temporalmente las casillas y el calendario se restaura al final del ciclo. "
+           "Las cifras permanecen fijas y reflejan los datos reales de GitHub."
+           if animated else "Calendario completo sin animaciones, con los niveles de actividad originales de GitHub.")
     )
     defs = node(svg, "defs")
     gradient = node(defs, "linearGradient", id="surface", x2="1", y2="1")
     node(gradient, "stop", stop_color=PANEL)
     node(gradient, "stop", offset="1", stop_color=BG)
-    if animated:
-        style = node(defs, "style")
-        style.text = (
-            "@keyframes activity-flow{to{stroke-dashoffset:-56}}"
-            ".activity-flow{animation:activity-flow 14s linear infinite}"
-            "@media(prefers-reduced-motion:reduce){.activity-flow{animation:none}}"
-        )
-    rect(svg, 0.5, 0.5, width - 1, height - 1, "url(#surface)", 22, stroke=LINE)
+    rect(svg, .5, .5, width - 1, height - 1, "url(#surface)", 22, stroke=LINE)
     margin = 28 if mobile else 40
-    overline_y = 36 if mobile else 40
-    text(svg, margin, overline_y, "GITHUB / ACTIVIDAD REAL", 14, MINT, 500, mono=True, letter_spacing="1.5")
-    text(svg, margin - 1, 85 if mobile else 92, "Actividad en GitHub",
-         43 if mobile else 47, INK, 650, letter_spacing="-1.5")
-    text(svg, margin, 113 if mobile else 122,
-         f"@{data['username']} · Código y proyectos, día a día.",
-         18 if mobile else 17, MUTED)
-    if not mobile:
-        rect(svg, 1008, 36, 152, 30, MINT, 15, fill_opacity=".08", stroke=MINT, stroke_opacity=".3")
-        node(svg, "circle", cx=1026, cy=51, r=3.5, fill=MINT)
-        text(svg, 1040, 56, "DATOS REALES", 11.5, MINT, 600, mono=True, letter_spacing=".6")
+    text(svg, margin, 57 if mobile else 58, "Actividad en GitHub",
+         36 if mobile else 34, INK, 650, letter_spacing="-.9")
+    period = date_range(data["_start"], data["_end"])
+    text(svg, margin if mobile else width - margin, 87 if mobile else 58,
+         period, 17 if mobile else 14, MUTED, text_anchor="start" if mobile else "end")
     metrics = (
-        ("total_contributions", "Contribuciones", "último año · GitHub", MINT),
-        ("active_days", "Días activos", "en el calendario anual", LAVENDER),
-        ("last_30_days", "Contribuciones", "últimos 30 días", SAND),
-        ("public_repos", "Repositorios", "públicos en GitHub", MINT),
+        ("total_contributions", "Contribuciones · año", MINT),
+        ("active_days", "Días activos · año", LAVENDER),
+        ("last_30_days", "Contribuciones · 30 días", SAND),
+        ("public_repos", "Repositorios públicos", MINT),
     )
-    for index, (key, label, detail, accent) in enumerate(metrics):
-        if mobile:
-            x, y, card_w, card_h = 28 + (index % 2) * 340, 137 + (index // 2) * 119, 324, 106
-        else:
-            x, y, card_w, card_h = 40 + index * 285, 148, 265, 113
-        statistic(svg, x, y, card_w, card_h, data[key], label, detail, accent, mobile)
+    for index, (key, label, accent) in enumerate(metrics):
+        x = 28 + (index % 2) * 340 if mobile else 40 + index * 285
+        y = 143 + (index // 2) * 84 if mobile else 139
+        value = number(data[key])
+        text(svg, x, y, value, 44 if len(value) < 7 else 39,
+             accent, 650, letter_spacing="-1.4")
+        text(svg, x, y + 27, label, 18 if mobile else 15, MUTED)
     weeks = calendar_weeks(data)
     if mobile:
         split = math.ceil(len(weeks) / 2)
-        groups = (weeks[:split], weeks[split:])
-        for index, group in enumerate(groups):
-            panel_y = 382 + index * 222
-            rect(svg, 28, panel_y, 664, 207, BG, 14, stroke=LINE)
-            actual = [day["date"] for week in group for day in week if day]
-            text(svg, 49, panel_y + 30, f"Calendario anual · {index + 1} / 2", 18, INK, 550)
-            text(svg, 671, panel_y + 30, date_range(min(actual), max(actual)), 13, MUTED, text_anchor="end")
-            draw_calendar(svg, group, 82, panel_y + 71, 21.5, 17.5, 14.5, 15)
-        legend(svg, 686, 835, 15, 14, 6)
-        rule(svg, 28, 861, 664)
-        footer_y = 887
-        update_label = "Actualizado"
+        for index, group in enumerate((weeks[:split], weeks[split:])):
+            draw_calendar(svg, group, 79, 320 + index * 190, 21.5, 19, 16, 17,
+                          animated=animated, id_prefix=f"half-{index + 1}")
+        legend(svg, 692, 674, 15, 14, 6)
+        rule(svg, 28, 699, 664)
+        footer_y = 726
     else:
-        rect(svg, 40, 285, 1120, 253, BG, 16, stroke=LINE)
-        text(svg, 64, 319, "Un año de contribuciones", 21, INK, 550)
-        text(svg, 1136, 319, date_range(data["_start"], data["_end"]), 14, MUTED, text_anchor="end")
-        pitch = min(19.5, 1020 / len(weeks))
-        draw_calendar(svg, weeks, 99, 366, pitch, 18.5, 15, 14)
-        text(svg, 64, 518, "CADA CUADRO REPRESENTA UN DÍA", 11.5, MUTED, 400, mono=True, letter_spacing=".8")
-        legend(svg, 1136, 504, 13, 12, 5)
-        rule(svg, 40, 562, 1120)
-        footer_y = 591
-        update_label = "Última actualización"
-    # Only this decorative line moves. Calendar colors, bars and counts are static.
-    rule(svg, margin, footer_y - 5, 28, LINE, stroke_width=2, stroke_linecap="round")
-    rule(svg, margin, footer_y - 5, 28, MINT, stroke_width=2, stroke_linecap="round",
-         stroke_dasharray="8 20", **({"class": "activity-flow"} if animated else {}))
+        pitch = min(20, 1056 / len(weeks))
+        draw_calendar(svg, weeks, 89, 236, pitch, 20, 16, 14,
+                      animated=animated, id_prefix="year")
+        legend(svg, 1160, 392, 13, 12, 5)
+        footer_y = 430
     updated = data["_updated"]
-    updated_label = f"{short_date(updated.date())} · {updated:%H:%M} EC"
-    text(svg, margin + 40, footer_y, f"{update_label}: {updated_label}",
-         14 if mobile else 13, MUTED)
-    text(svg, width - margin, footer_y, "Fuente: GitHub", 14 if mobile else 13, MUTED, text_anchor="end")
+    stamp = f"{short_date(updated.date())} · {updated:%H:%M} EC"
+    text(svg, margin, footer_y, f"Actualizado: {stamp}", 15 if mobile else 13, MUTED)
+    text(svg, width - margin, footer_y, "Fuente: GitHub", 15 if mobile else 13, MUTED,
+         text_anchor="end")
     return ET.tostring(svg, encoding="unicode", xml_declaration=False) + "\n"
 
 
@@ -342,7 +290,7 @@ def main() -> None:
     rendered = {}
     for mobile in (False, True):
         for animated in (True, False):
-            name = "activity" + ("-mobile" if mobile else "") + ("" if animated else "-static") + ".svg"
+            name = "activity-overview" + ("-mobile" if mobile else "") + ("" if animated else "-static") + ".svg"
             output = make_svg(snapshot, mobile, animated)
             ET.fromstring(output)
             rendered[name] = output
