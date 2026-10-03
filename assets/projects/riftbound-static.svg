@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="220" viewBox="0 0 600 220" role="img" aria-labelledby="title desc">
+  <title id="title">Riftbound — Data pipelines</title>
+  <desc id="desc">Tarjeta azul noche con un pipeline de datos conectado y detalles en color arena.</desc>
+  <defs>
+    <linearGradient id="surface" x2="1" y2="1"><stop stop-color="#121e30"/><stop offset="1" stop-color="#0b1220"/></linearGradient>
+    <style>@keyframes transfer{to{stroke-dashoffset:-32}}.transfer{animation:none}@media(prefers-reduced-motion:reduce){.transfer{animation:none}}</style>
+  </defs>
+  <rect x=".5" y=".5" width="599" height="219" rx="20" fill="url(#surface)" stroke="#26364c"/>
+  <path d="M369 20v180M30 184h310" stroke="#26364c"/>
+  <path d="M30 184h64" stroke="#f5c98b" stroke-width="2"/>
+  <text x="30" y="42" fill="#9caec2" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14">06 / DATA PIPELINES</text>
+  <text x="29" y="117" fill="#eef4f8" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="44" font-weight="650" letter-spacing="-1.5">Riftbound</text>
+  <g fill="none" stroke="#26364c" stroke-width="1.5">
+    <path d="M426 66h38v44m-38 44h38v-44m25 0h29m24 22v27h-57"/>
+    <path d="M464 110v-1"/>
+    <path d="M398 55v23c0 5 28 5 28 0V55" fill="#121e30"/>
+    <ellipse cx="412" cy="55" rx="14" ry="5" fill="#121e30"/>
+    <path d="M398 66c0 5 28 5 28 0"/>
+    <rect x="398" y="139" width="28" height="30" rx="6" fill="#121e30"/>
+    <rect x="442" y="89" width="44" height="44" rx="11" fill="#121e30"/>
+    <rect x="517" y="90" width="42" height="42" rx="10" fill="#121e30"/>
+    <rect x="454" y="151" width="31" height="17" rx="5" fill="#121e30"/>
+  </g>
+  <path class="transfer" d="M426 66h38v23m-38 65h16m44-44h31m25 22v27h-57" fill="none" stroke="#f5c98b" stroke-width="1.7" stroke-dasharray="4 12"/>
+  <rect x="442" y="89" width="44" height="44" rx="11" fill="#f5c98b" fill-opacity=".08" stroke="#f5c98b" stroke-opacity=".75"/>
+  <path d="m453 109 6-6 5 6 6-6 6 6m-23 5 6 6 5-6 6 6 6-6" fill="none" stroke="#f5c98b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M406 150h12m-12 8h8" stroke="#9caec2" stroke-linecap="round"/>
+  <path d="m530 111 6 6 10-12" fill="none" stroke="#f5c98b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="470" cy="159.5" r="2.5" fill="#f5c98b"/>
+</svg>

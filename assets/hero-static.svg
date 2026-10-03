@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="460" viewBox="0 0 1200 460" fill="none" role="img" aria-labelledby="title desc">
+<title id="title">Cristian Bravo · Full Stack Developer · Ecuador. Interfaces, APIs y automatización.</title><desc id="desc">Diseño original para el perfil de Cristian Bravo. Animación sutil compatible con movimiento reducido.</desc>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1200" y2="460" gradientUnits="userSpaceOnUse"><stop stop-color="#0b1220"/><stop offset="1" stop-color="#101e30"/></linearGradient>
+<radialGradient id="glow"><stop stop-color="#91f5ce" stop-opacity=".11"/><stop offset="1" stop-color="#91f5ce" stop-opacity="0"/></radialGradient>
+<pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" stroke="#7287a6" stroke-opacity=".075"/></pattern>
+<linearGradient id="line"><stop stop-color="#91f5ce"/><stop offset="1" stop-color="#c5b8ff"/></linearGradient></defs><style>
+text{font-family:Segoe UI,Arial,sans-serif}.mono{font-family:Consolas,monospace}
+.flow{stroke-dasharray:7 15;animation:none}.orbit{transform-origin:920px 220px;animation:none}
+.pulse{animation:none}.float{animation:none}
+@keyframes flow{to{stroke-dashoffset:-176}}@keyframes orbit{to{transform:rotate(360deg)}}
+@keyframes pulse{0%,100%{opacity:.4}50%{opacity:1}}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@media(prefers-reduced-motion:reduce){.flow,.orbit,.pulse,.float{animation:none}}
+</style>
+<rect x="1" y="1" width="1198" height="458" rx="26" fill="url(#bg)" stroke="#26364c" stroke-width="2"/>
+<rect x="660" y="18" width="515" height="424" rx="20" fill="url(#grid)"/>
+<circle cx="920" cy="220" r="230" fill="url(#glow)"/>
+<rect x="48" y="45" width="40" height="30" rx="8" fill="#91f5ce"/><text x="68" y="66" text-anchor="middle" font-size="17" font-weight="800" fill="#0b1220">cb.</text>
+<text x="102" y="66" class="mono" font-size="15" letter-spacing="2.6" fill="#9caec2">CYSTEMS / ECUADOR</text>
+<text x="48" y="160" font-size="82" font-weight="750" letter-spacing="-3.5" fill="#eef4f8">Cristian</text>
+<text x="45" y="245" font-size="98" font-weight="750" letter-spacing="-4.5" fill="#91f5ce">Bravo<tspan fill="#c5b8ff">.</tspan></text>
+<text x="51" y="293" class="mono" font-size="21" letter-spacing="2" fill="#d4dfec">FULL STACK DEVELOPER</text>
+<text x="51" y="339" font-size="22" fill="#a6b8cb">Interfaces, APIs y automatización.</text>
+<path d="M51 376H549" stroke="#26364c"/>
+<circle cx="57" cy="408" r="4" fill="#91f5ce"/>
+<text x="72" y="414" class="mono" font-size="13" letter-spacing="1.2" fill="#9caec2">DE LA IDEA AL DESPLIEGUE</text>
+<text x="550" y="414" text-anchor="end" class="mono" font-size="13" fill="#91f5ce">cystems.ec ↗</text>
+<circle cx="920" cy="220" r="172" stroke="#26364c"/>
+<circle cx="920" cy="220" r="136" stroke="#26364c" stroke-dasharray="3 10"/>
+<g class="orbit"><circle cx="920" cy="48" r="5" fill="#91f5ce"/><circle cx="920" cy="392" r="4" fill="#c5b8ff"/></g>
+<path d="M750 123H791V156M1050 308H1090V247M849 315V354H777" stroke="#647e96" stroke-width="1.5"/>
+<path class="flow" d="M750 123H791V156M1050 308H1090V247M849 315V354H777" stroke="#91f5ce" stroke-width="2"/>
+<g class="float"><rect x="785" y="136" width="270" height="176" rx="17" fill="#0b1220" stroke="#426555"/>
+<path d="M786 175H1054" stroke="#26364c"/><circle cx="807" cy="157" r="3.5" fill="#91f5ce"/><circle cx="821" cy="157" r="3.5" fill="#c5b8ff"/><circle cx="835" cy="157" r="3.5" fill="#f5c98b"/>
+<text x="1033" y="162" text-anchor="end" class="mono" font-size="11" letter-spacing="1.5" fill="#9caec2">BUILD / SHIP</text>
+<text x="807" y="211" class="mono" font-size="15" fill="#c5b8ff">const <tspan fill="#eef4f8">idea</tspan> <tspan fill="#9caec2">= {</tspan></text>
+<text x="822" y="238" class="mono" font-size="15" fill="#9caec2">  purpose: <tspan fill="#91f5ce">'create'</tspan>,</text>
+<text x="822" y="265" class="mono" font-size="15" fill="#9caec2">  focus: <tspan fill="#f5c98b">'people'</tspan></text>
+<text x="807" y="292" class="mono" font-size="15" fill="#9caec2">};</text><rect class="pulse" x="838" y="280" width="8" height="14" fill="#91f5ce"/>
+</g>
+<g><rect x="701" y="89" width="122" height="40" rx="10" fill="#142334" stroke="#385446"/><text x="762" y="114" text-anchor="middle" class="mono" font-size="13" fill="#91f5ce">&lt;frontend /&gt;</text></g>
+<g><rect x="1006" y="316" width="121" height="42" rx="10" fill="#1c2035" stroke="#4d4565"/><text x="1066" y="342" text-anchor="middle" class="mono" font-size="13" fill="#c5b8ff">{ backend }</text></g>
+<g><rect x="699" y="336" width="99" height="38" rx="10" fill="#25251f" stroke="#5c543c"/><text x="748" y="360" text-anchor="middle" class="mono" font-size="13" fill="#f5c98b">~/deploy</text></g>
+<text x="925" y="424" text-anchor="middle" class="mono" font-size="11" letter-spacing="3" fill="#738ba3">CODE WITH PURPOSE</text>
+</svg>

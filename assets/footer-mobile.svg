@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="280" viewBox="0 0 720 280" fill="none" role="img" aria-labelledby="title desc">
+<title id="title">¿Construimos algo útil? Visita cystems.ec.</title><desc id="desc">Diseño original para el perfil de Cristian Bravo. Animación sutil compatible con movimiento reducido.</desc>
+<defs></defs><style>
+text{font-family:Segoe UI,Arial,sans-serif}.mono{font-family:Consolas,monospace}
+.flow{stroke-dasharray:7 15;animation:flow 8s linear infinite}.orbit{transform-origin:920px 220px;animation:orbit 42s linear infinite}
+.pulse{animation:pulse 5s ease-in-out infinite}.float{animation:float 8s ease-in-out infinite}
+@keyframes flow{to{stroke-dashoffset:-176}}@keyframes orbit{to{transform:rotate(360deg)}}
+@keyframes pulse{0%,100%{opacity:.4}50%{opacity:1}}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@media(prefers-reduced-motion:reduce){.flow,.orbit,.pulse,.float{animation:none}}
+</style><rect x="1" y="1" width="718" height="278" rx="22" fill="#0b1220" stroke="#26364c" stroke-width="2"/><text x="38" y="56" class="mono" font-size="18" letter-spacing="2" fill="#91f5ce">LET'S BUILD SOMETHING USEFUL</text><text x="37" y="120" font-size="43" font-weight="650" letter-spacing="-1" fill="#eef4f8">¿Construimos algo útil?</text><text x="39" y="167" font-size="25" fill="#9caec2">Software pensado para las personas.</text><text x="39" y="231" font-size="30" font-weight="650" fill="#91f5ce">cystems.ec ↗</text></svg>

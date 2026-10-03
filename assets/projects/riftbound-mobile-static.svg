@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="240" viewBox="0 0 360 240" role="img" aria-labelledby="title desc">
+  <title id="title">Riftbound — Data pipelines</title>
+  <desc id="desc">Tarjeta compacta azul noche con letras grandes y un pipeline de datos en color arena.</desc>
+  <defs>
+    <linearGradient id="surface" x2="1" y2="1"><stop stop-color="#121e30"/><stop offset="1" stop-color="#0b1220"/></linearGradient>
+    <style>@keyframes transfer{to{stroke-dashoffset:-32}}.transfer{animation:none}@media(prefers-reduced-motion:reduce){.transfer{animation:none}}</style>
+  </defs>
+  <rect x=".5" y=".5" width="359" height="239" rx="18" fill="url(#surface)" stroke="#26364c"/>
+  <text x="24" y="35" fill="#9caec2" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="16">06 / PIPELINES</text>
+  <circle cx="329" cy="29" r="4" fill="#f5c98b"/>
+  <text x="22" y="103" fill="#eef4f8" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="44" font-weight="700" letter-spacing="-1.5">Riftbound</text>
+  <path d="M24 214h137" stroke="#26364c"/><path d="M24 214h47" stroke="#f5c98b" stroke-width="2"/>
+  <g fill="#121e30" stroke="#26364c" stroke-width="1.5"><path d="M229 143h38v16m-38 40h38v-18m16-6h19" fill="none"/><path d="M207 137v19c0 4 22 4 22 0v-19"/><ellipse cx="218" cy="137" rx="11" ry="4"/><path d="M207 147c0 4 22 4 22 0"/><rect x="207" y="186" width="22" height="26" rx="5"/><rect x="251" y="159" width="32" height="32" rx="9"/><rect x="302" y="159" width="30" height="32" rx="8"/></g>
+  <path class="transfer" d="M229 143h38v16m-38 40h22m32-24h19" fill="none" stroke="#f5c98b" stroke-width="1.8" stroke-dasharray="4 12"/>
+  <rect x="251" y="159" width="32" height="32" rx="9" fill="#f5c98b" fill-opacity=".09" stroke="#f5c98b" stroke-opacity=".8"/>
+  <path d="m258 172 4-5 5 5 4-5 5 5m-18 6 4 5 5-5 4 5 5-5" fill="none" stroke="#f5c98b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M213 195h10m-10 7h7" stroke="#9caec2" stroke-linecap="round"/><path d="m310 175 5 5 8-10" fill="none" stroke="#f5c98b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

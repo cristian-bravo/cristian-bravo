@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="240" viewBox="0 0 360 240" role="img" aria-labelledby="title desc">
+  <title id="title">FUALTEC — Plataformas web</title>
+  <desc id="desc">Tarjeta compacta azul noche con letras grandes y una arquitectura web en verde menta.</desc>
+  <defs>
+    <linearGradient id="surface" x2="1" y2="1"><stop stop-color="#121e30"/><stop offset="1" stop-color="#0b1220"/></linearGradient>
+    <style>@keyframes travel{to{stroke-dashoffset:-32}}.signal{animation:none}@media(prefers-reduced-motion:reduce){.signal{animation:none}}</style>
+  </defs>
+  <rect x=".5" y=".5" width="359" height="239" rx="18" fill="url(#surface)" stroke="#26364c"/>
+  <text x="24" y="35" fill="#9caec2" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="16">01 / WEB</text>
+  <circle cx="329" cy="29" r="4" fill="#91f5ce"/>
+  <text x="22" y="103" fill="#eef4f8" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="44" font-weight="700" letter-spacing="-1.5">FUALTEC</text>
+  <path d="M24 214h137" stroke="#26364c"/><path d="M24 214h47" stroke="#91f5ce" stroke-width="2"/>
+  <g fill="#121e30" stroke="#26364c" stroke-width="1.5">
+    <rect x="208" y="127" width="122" height="65" rx="8"/><path d="M208 146h122"/>
+    <rect x="220" y="157" width="36" height="24" rx="4"/><path d="M266 160h49m-49 10h35"/>
+    <path d="M269 192v21h-43m43 0h42" fill="none"/>
+  </g>
+  <g fill="#9caec2"><circle cx="220" cy="137" r="2"/><circle cx="228" cy="137" r="2"/><circle cx="236" cy="137" r="2"/></g>
+  <rect x="220" y="157" width="36" height="24" rx="4" fill="#91f5ce" fill-opacity=".1" stroke="#91f5ce" stroke-opacity=".7"/>
+  <path d="m233 163-5 6 5 6m10-12 5 6-5 6" fill="none" stroke="#91f5ce" stroke-width="1.5" stroke-linecap="round"/>
+  <path class="signal" d="M269 192v21h42" fill="none" stroke="#91f5ce" stroke-width="2" stroke-dasharray="4 12"/>
+  <g fill="#91f5ce"><circle cx="226" cy="213" r="4"/><circle cx="311" cy="213" r="4"/></g>
+</svg>

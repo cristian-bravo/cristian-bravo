@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="720" viewBox="0 0 720 720" fill="none" role="img" aria-labelledby="title desc">
+<title id="title">Cristian Bravo · Full Stack Developer · Ecuador</title><desc id="desc">Diseño original para el perfil de Cristian Bravo. Animación sutil compatible con movimiento reducido.</desc>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1200" y2="460" gradientUnits="userSpaceOnUse"><stop stop-color="#0b1220"/><stop offset="1" stop-color="#101e30"/></linearGradient>
+<radialGradient id="glow"><stop stop-color="#91f5ce" stop-opacity=".11"/><stop offset="1" stop-color="#91f5ce" stop-opacity="0"/></radialGradient>
+<pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" stroke="#7287a6" stroke-opacity=".075"/></pattern>
+<linearGradient id="line"><stop stop-color="#91f5ce"/><stop offset="1" stop-color="#c5b8ff"/></linearGradient></defs><style>
+text{font-family:Segoe UI,Arial,sans-serif}.mono{font-family:Consolas,monospace}
+.flow{stroke-dasharray:7 15;animation:flow 8s linear infinite}.orbit{transform-origin:920px 220px;animation:orbit 42s linear infinite}
+.pulse{animation:pulse 5s ease-in-out infinite}.float{animation:float 8s ease-in-out infinite}
+@keyframes flow{to{stroke-dashoffset:-176}}@keyframes orbit{to{transform:rotate(360deg)}}
+@keyframes pulse{0%,100%{opacity:.4}50%{opacity:1}}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@media(prefers-reduced-motion:reduce){.flow,.orbit,.pulse,.float{animation:none}}
+</style><rect x="1" y="1" width="718" height="718" rx="28" fill="#0b1220" stroke="#26364c" stroke-width="2"/>
+<rect x="30" y="370" width="660" height="320" rx="20" fill="url(#grid)"/>
+<rect x="42" y="40" width="44" height="34" rx="9" fill="#91f5ce"/><text x="64" y="64" text-anchor="middle" font-size="21" font-weight="800" fill="#0b1220">cb.</text>
+<text x="104" y="64" class="mono" font-size="21" letter-spacing="2" fill="#9caec2">CYSTEMS / ECUADOR</text>
+<text x="41" y="177" font-size="99" font-weight="750" letter-spacing="-4" fill="#eef4f8">Cristian</text>
+<text x="37" y="283" font-size="119" font-weight="750" letter-spacing="-4" fill="#91f5ce">Bravo<tspan fill="#c5b8ff">.</tspan></text>
+<text x="45" y="338" class="mono" font-size="26" letter-spacing="1.5" fill="#d4dfec">FULL STACK DEVELOPER</text>
+<text x="45" y="393" font-size="28" fill="#a6b8cb">Interfaces, APIs y automatización.</text>
+<path d="M46 441H675" stroke="#26364c"/>
+<path d="M149 535H570" stroke="#26364c" stroke-width="2"/><path class="flow" d="M149 535H570" stroke="#91f5ce" stroke-width="2"/>
+<rect x="54" y="480" width="170" height="100" rx="18" fill="#142334" stroke="#385446"/><text x="139" y="525" text-anchor="middle" class="mono" font-size="27" fill="#91f5ce">&lt; /&gt;</text><text x="139" y="555" text-anchor="middle" font-size="19" fill="#d4dfec">Frontend</text>
+<rect x="275" y="480" width="170" height="100" rx="18" fill="#1c2035" stroke="#4d4565"/><text x="360" y="525" text-anchor="middle" class="mono" font-size="27" fill="#c5b8ff">{ API }</text><text x="360" y="555" text-anchor="middle" font-size="19" fill="#d4dfec">Backend</text>
+<rect x="496" y="480" width="170" height="100" rx="18" fill="#25251f" stroke="#5c543c"/><text x="581" y="525" text-anchor="middle" class="mono" font-size="27" fill="#f5c98b">~ /</text><text x="581" y="555" text-anchor="middle" font-size="19" fill="#d4dfec">Deploy</text>
+<circle class="pulse" cx="54" cy="661" r="5" fill="#91f5ce"/><text x="74" y="667" class="mono" font-size="17" letter-spacing="1" fill="#9caec2">DE LA IDEA AL DESPLIEGUE</text><text x="666" y="667" text-anchor="end" class="mono" font-size="18" fill="#91f5ce">cystems.ec</text></svg>

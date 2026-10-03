@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="220" viewBox="0 0 600 220" role="img" aria-labelledby="title desc">
+  <title id="title">Data Lab — Business intelligence</title>
+  <desc id="desc">Tarjeta azul noche con un gráfico de datos vectorial y acentos lavanda.</desc>
+  <defs>
+    <linearGradient id="surface" x2="1" y2="1"><stop stop-color="#121e30"/><stop offset="1" stop-color="#0b1220"/></linearGradient>
+    <linearGradient id="area" x2="0" y2="1"><stop stop-color="#c5b8ff" stop-opacity=".16"/><stop offset="1" stop-color="#c5b8ff" stop-opacity="0"/></linearGradient>
+    <style>@keyframes stream{to{stroke-dashoffset:-40}}.stream{animation:none}@media(prefers-reduced-motion:reduce){.stream{animation:none}}</style>
+  </defs>
+  <rect x=".5" y=".5" width="599" height="219" rx="20" fill="url(#surface)" stroke="#26364c"/>
+  <path d="M369 20v180M30 184h310" stroke="#26364c"/>
+  <path d="M30 184h64" stroke="#c5b8ff" stroke-width="2"/>
+  <text x="30" y="42" fill="#9caec2" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14">05 / BUSINESS INTELLIGENCE</text>
+  <text x="29" y="117" fill="#eef4f8" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="44" font-weight="650" letter-spacing="-1.5">Data Lab</text>
+  <rect x="396" y="39" width="164" height="144" rx="11" fill="#121e30" stroke="#26364c" stroke-width="1.5"/>
+  <path d="M410 61h27m-27 8h43" stroke="#9caec2" stroke-opacity=".6" stroke-linecap="round"/>
+  <g stroke="#26364c"><path d="M411 91h134m-134 25h134m-134 25h134m-134 25h134"/><path d="M434 87v79m34-79v79m34-79v79m34-79v79" stroke-dasharray="2 6"/></g>
+  <path d="m411 147 26-16 27 6 29-36 22 9 30-27v83H411Z" fill="url(#area)"/>
+  <path d="m411 147 26-16 27 6 29-36 22 9 30-27" fill="none" stroke="#c5b8ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="stream" d="M411 155c29 0 38-2 60-15s37-4 74-17" fill="none" stroke="#9caec2" stroke-opacity=".6" stroke-dasharray="4 6"/>
+  <circle cx="493" cy="101" r="5" fill="#121e30" stroke="#c5b8ff" stroke-width="2"/>
+  <circle cx="545" cy="83" r="4" fill="#c5b8ff"/>
+  <rect x="523" y="53" width="23" height="10" rx="5" fill="#c5b8ff" fill-opacity=".2"/>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="220" viewBox="0 0 600 220" role="img" aria-labelledby="title desc">
+  <title id="title">Financial Reconciliation — Data engineering</title>
+  <desc id="desc">Tarjeta azul noche con dos tablas que convergen en una validación, en tonos arena.</desc>
+  <defs>
+    <linearGradient id="surface" x2="1" y2="1"><stop stop-color="#121e30"/><stop offset="1" stop-color="#0b1220"/></linearGradient>
+    <style>@keyframes flow{to{stroke-dashoffset:-36}}.flow{animation:none}@media(prefers-reduced-motion:reduce){.flow{animation:none}}</style>
+  </defs>
+  <rect x=".5" y=".5" width="599" height="219" rx="20" fill="url(#surface)" stroke="#26364c"/>
+  <path d="M369 20v180M30 184h310" stroke="#26364c"/>
+  <path d="M30 184h64" stroke="#f5c98b" stroke-width="2"/>
+  <text x="30" y="42" fill="#9caec2" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14">03 / DATA ENGINEERING</text>
+  <g fill="#eef4f8" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="38" font-weight="650" letter-spacing="-1.2"><text x="29" y="105">Financial</text><text x="29" y="150">Reconciliation</text></g>
+  <g fill="#121e30" stroke="#26364c" stroke-width="1.5">
+    <rect x="398" y="41" width="70" height="84" rx="9"/>
+    <rect x="490" y="41" width="70" height="84" rx="9"/>
+    <path d="M398 65h70m22 0h70m-127 60v29h45m47-29v29h-47" fill="none"/>
+    <circle cx="478" cy="163" r="24"/>
+  </g>
+  <path d="M411 53h23m69 0h23" stroke="#f5c98b" stroke-width="2" stroke-linecap="round"/>
+  <g stroke="#9caec2" stroke-opacity=".55" stroke-linecap="round"><path d="M410 80h22m9 0h15m-46 13h15m9 0h22m-46 13h28m7 0h11m47-26h22m9 0h14m-45 13h15m9 0h21m-45 13h28m7 0h10"/></g>
+  <path class="flow" d="M433 125v29h21m71-29v29h-23" fill="none" stroke="#f5c98b" stroke-width="2" stroke-dasharray="5 13"/>
+  <circle cx="478" cy="163" r="24" fill="#f5c98b" fill-opacity=".07" stroke="#f5c98b" stroke-opacity=".7"/>
+  <path d="m468 163 7 7 13-15" fill="none" stroke="#f5c98b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

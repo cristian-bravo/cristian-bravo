@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="211" height="48" viewBox="0 0 211 48" fill="none" role="img" aria-labelledby="title desc">
+<title id="title">CV público · PDF</title><desc id="desc">Diseño original para el perfil de Cristian Bravo. Animación sutil compatible con movimiento reducido.</desc>
+<defs></defs><style>
+text{font-family:Segoe UI,Arial,sans-serif}.mono{font-family:Consolas,monospace}
+.flow{stroke-dasharray:7 15;animation:flow 8s linear infinite}.orbit{transform-origin:920px 220px;animation:orbit 42s linear infinite}
+.pulse{animation:pulse 5s ease-in-out infinite}.float{animation:float 8s ease-in-out infinite}
+@keyframes flow{to{stroke-dashoffset:-176}}@keyframes orbit{to{transform:rotate(360deg)}}
+@keyframes pulse{0%,100%{opacity:.4}50%{opacity:1}}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@media(prefers-reduced-motion:reduce){.flow,.orbit,.pulse,.float{animation:none}}
+</style><rect x="1" y="1" width="209" height="46" rx="11" fill="#121e30" stroke="#f5c98b" stroke-opacity=".6"/><text x="20" y="30" fill="#f5c98b" font-size="17" font-weight="600">CV público · PDF</text><path d="M177 30l12-12m-12 0h12v12" stroke="#f5c98b" stroke-width="1.5"/></svg>
