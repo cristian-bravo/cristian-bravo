@@ -6,25 +6,17 @@
   <a href="cv/Cristian_Bravo_Full_Stack_Developer_CV.pdf"><img src="assets/link-cv.svg" height="40" alt="Leer mi hoja de vida completa en PDF"></a>
 </p>
 
-Soy **Cristian Bravo**, desarrollador Full Stack en Ecuador y creador de **[CYSTEMS](https://cystems.ec)**. Construyo plataformas web, APIs y automatizaciones: de la experiencia de usuario al despliegue en producción.
-
-### 01 / Mi actividad en GitHub
+Construyo plataformas web, APIs y automatizaciones con **[CYSTEMS](https://cystems.ec)**, desde Ecuador.
 
 <a href="https://github.com/cristian-bravo#js-contribution-activity">
   <picture>
-    <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="https://raw.githubusercontent.com/cristian-bravo/cristian-bravo/profile-metrics/assets/activity-mobile-static.svg">
-    <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/cristian-bravo/cristian-bravo/profile-metrics/assets/activity-static.svg">
-    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/cristian-bravo/cristian-bravo/profile-metrics/assets/activity-mobile.svg">
-    <img src="https://raw.githubusercontent.com/cristian-bravo/cristian-bravo/profile-metrics/assets/activity.svg" width="100%" alt="Mi actividad real en GitHub: contribuciones del último año, días activos, actividad de los últimos 30 días y calendario anual. Actualización automática cuatro veces al día.">
+    <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="https://raw.githubusercontent.com/cristian-bravo/cristian-bravo/profile-metrics/assets/activity-overview-mobile-static.svg">
+    <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/cristian-bravo/cristian-bravo/profile-metrics/assets/activity-overview-static.svg">
+    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/cristian-bravo/cristian-bravo/profile-metrics/assets/activity-overview-mobile.svg">
+    <img src="https://raw.githubusercontent.com/cristian-bravo/cristian-bravo/profile-metrics/assets/activity-overview.svg" width="100%" alt="Mi actividad en GitHub: contribuciones, días activos y repositorios públicos. Un único calendario animado muestra a la serpiente consumir y restaurar las casillas; las cifras permanecen fijas.">
   </picture>
 </a>
 
-<picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="https://raw.githubusercontent.com/cristian-bravo/cristian-bravo/profile-metrics/assets/activity-snake-mobile-static.svg">
-  <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/cristian-bravo/cristian-bravo/profile-metrics/assets/activity-snake-static.svg">
-  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/cristian-bravo/cristian-bravo/profile-metrics/assets/activity-snake-mobile.svg">
-  <img src="https://raw.githubusercontent.com/cristian-bravo/cristian-bravo/profile-metrics/assets/activity-snake.svg" width="100%" alt="Contribution snake: una serpiente animada recorre mi calendario real de GitHub.">
-</picture>
 
 <details>
 <summary><strong>Ver mis últimos movimientos públicos</strong></summary>
@@ -33,9 +25,9 @@ Soy **Cristian Bravo**, desarrollador Full Stack en Ecuador y creador de **[CYST
 
 </details>
 
-<p align="right"><sub>Datos de GitHub · Actualización automática cada 6 horas · <a href="https://github.com/cristian-bravo#js-contribution-activity">Ver historial completo ↗</a></sub></p>
+<p align="right"><sub>Actualización cada 6 h · <a href="https://raw.githubusercontent.com/cristian-bravo/cristian-bravo/profile-metrics/assets/activity-overview-static.svg">Calendario sin animación</a> · <a href="https://github.com/cristian-bravo#js-contribution-activity">Ver historial completo ↗</a></sub></p>
 
-### 02 / Explora lo que construyo
+### Proyectos seleccionados
 
 <table>
   <tr>
@@ -54,7 +46,7 @@ Soy **Cristian Bravo**, desarrollador Full Stack en Ecuador y creador de **[CYST
 
 <p align="right"><a href="https://cystems.ec/proyectos">Casos de proyecto ↗</a> · <a href="https://github.com/cristian-bravo?tab=repositories">Todos mis repositorios ↗</a></p>
 
-### 03 / Tecnología y experiencia
+### Tecnología y experiencia
 
 **Interfaces** · React, Next.js, Astro, Vue, TypeScript y Tailwind CSS.  
 **Backend y datos** · Node.js, Laravel, PHP, Python, PostgreSQL, MySQL y MongoDB.  
