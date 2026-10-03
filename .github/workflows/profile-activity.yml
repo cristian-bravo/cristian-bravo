@@ -1,0 +1,61 @@
+name: Update profile activity
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 */6 * * *'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/**'
+      - '.github/workflows/profile-activity.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-activity
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out generator
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: main
+          path: source
+      - name: Check out generated data branch
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: profile-metrics
+          path: metrics
+      - name: Test contribution calculations
+        working-directory: source
+        run: python3 -B -m unittest discover -s scripts -p 'test_*.py' -v
+      - name: Collect verified public profile data
+        working-directory: source
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 -B scripts/activity_data.py
+      - name: Render activity cards
+        working-directory: source
+        run: python3 -B scripts/render_activity.py
+      - name: Publish generated cards
+        shell: bash
+        run: |
+          mkdir -p metrics/assets metrics/data
+          cp source/assets/activity*.svg metrics/assets/
+          cp source/data/activity.json metrics/data/activity.json
+          cd metrics
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets data
+          if git diff --cached --quiet; then
+            echo 'Activity cards are unchanged.'
+          else
+            git commit -m 'Refresh public profile activity'
+            git push origin HEAD:profile-metrics
+          fi
