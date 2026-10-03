@@ -19,7 +19,19 @@ Soy **Cristian Bravo**, desarrollador Full Stack en Ecuador y creador de **[CYST
   </picture>
 </a>
 
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="https://raw.githubusercontent.com/cristian-bravo/cristian-bravo/profile-metrics/assets/activity-snake-mobile-static.svg">
+  <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/cristian-bravo/cristian-bravo/profile-metrics/assets/activity-snake-static.svg">
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/cristian-bravo/cristian-bravo/profile-metrics/assets/activity-snake-mobile.svg">
+  <img src="https://raw.githubusercontent.com/cristian-bravo/cristian-bravo/profile-metrics/assets/activity-snake.svg" width="100%" alt="Contribution snake: una serpiente animada recorre mi calendario real de GitHub.">
+</picture>
+
+<details>
+<summary><strong>Ver mis últimos movimientos públicos</strong></summary>
+
 <a href="https://github.com/cristian-bravo#js-contribution-activity"><picture><source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/cristian-bravo/cristian-bravo/profile-metrics/assets/activity-recent-mobile.svg"><img src="https://raw.githubusercontent.com/cristian-bravo/cristian-bravo/profile-metrics/assets/activity-recent.svg" width="100%" alt="Mi actividad pública reciente en otros proyectos. Eventos y fechas obtenidos directamente de GitHub."></picture></a>
+
+</details>
 
 <p align="right"><sub>Datos de GitHub · Actualización automática cada 6 horas · <a href="https://github.com/cristian-bravo#js-contribution-activity">Ver historial completo ↗</a></sub></p>
 
