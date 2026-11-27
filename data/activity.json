@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "username": "cristian-bravo",
-  "generated_at": "2026-11-26T21:38:08Z",
+  "generated_at": "2026-11-27T08:41:27Z",
   "date_from": "2025-11-23",
-  "date_to": "2026-11-26",
-  "total_contributions": 2721,
+  "date_to": "2026-11-27",
+  "total_contributions": 2722,
   "active_days": 287,
-  "last_30_days": 132,
+  "last_30_days": 126,
   "longest_streak": 223,
   "public_repos": 14,
   "days": [
@@ -1852,8 +1852,13 @@
     },
     {
       "date": "2026-11-26",
-      "count": 1,
+      "count": 2,
       "level": 1
+    },
+    {
+      "date": "2026-11-27",
+      "count": 0,
+      "level": 0
     }
   ],
   "recent_public_activity": [],
